@@ -23,7 +23,7 @@ export default function Home() {
           src="https://www.googletagmanager.com/gtag/js?id=G-W11XMFPKX7"
         />
 
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -32,9 +32,9 @@ export default function Home() {
               gtag('config', 'G-W11XMFPKX7', { page_path: window.location.pathname });
             `,
           }}
-        />
+        /> */}
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
       </Head>
 

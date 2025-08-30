@@ -28,7 +28,7 @@ export default function SportsWidget() {
 
         {/* Match status */}
         <div className="absolute left-1/2 transform -translate-x-1/2 text-center">
-          <p className="text-xs text-white opacity-70">63'</p>
+          <p className="text-xs text-white opacity-70">63&apos;</p>
           <p className="text-xs text-green-400 font-medium">Live</p>
         </div>
 
