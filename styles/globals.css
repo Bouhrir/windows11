@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('http://fonts.cdnfonts.com/css/segoe-ui-variable');
+
+/* Hide Scrollbar */
+::-webkit-scrollbar {
+    display: none;
+  }
+
+/* Segoe Font */
+html{
+    font-family: 'Segoe UI Variable', sans-serif;
+}
+
+/* fadein */
+.fadein{
+  animation: fadein 1s;
+}
+@keyframes fadein {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100;
+  }
+}
+
+.inter {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	font-bold: 700;
+}
