@@ -15,7 +15,7 @@
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
 <div align="center">
-  <b>Windows 11 made with 💛 using NextJS and TailwindCSS by Bouhrir Oussama.</b>
+  <b>Windows 11 made with 🤍 using NextJS and TailwindCSS by Bouhrir Oussama.</b>
 </div>
 
 # ScreenShots
