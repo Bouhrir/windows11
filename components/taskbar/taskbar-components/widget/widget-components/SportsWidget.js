@@ -3,7 +3,7 @@ import React from "react";
 
 export default function SportsWidget() {
   return (
-    <div className="w-[400px] bg-green-900/80 h-auto rounded p-4">
+    <div className="flex-1 bg-green-900/80 rounded-xl p-4 min-w-0">
       {/* Header */}
       <div className="flex relative">
         <div className="w-4 h-4 mr-3 bg-gradient-to-r from-yellow-500 to-purple-500 rounded-full flex items-center justify-center">

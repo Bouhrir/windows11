@@ -3,7 +3,7 @@ import React from "react";
 
 export default function TodoWidget() {
   return (
-    <div className="bg-zinc-800/80 w-full h-full rounded p-4 mt-4">
+    <div className="bg-zinc-800/80 w-full rounded-xl p-4">
       <div className="flex relative items-center">
         <img src="/icons/todo.png" alt="" className="w-5 mr-3" />
         <p className="opacity-90">To Do</p>
