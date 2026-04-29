@@ -38,10 +38,10 @@ export default function Home() {
 		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
       </Head>
 
-      <body className="text-white h-[864px] w-[1536px]">
+      <div className="text-white h-screen w-screen overflow-hidden relative">
         <Desktop />
         <Taskbar />
-      </body>
+      </div>
     </>
   );
 }

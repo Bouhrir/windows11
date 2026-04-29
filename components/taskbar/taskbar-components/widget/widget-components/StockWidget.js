@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function StockWidget() {
   return (
-    <div className="w-[201px] bg-zinc-800/80 h-full rounded p-4">
+    <div className="w-48 bg-zinc-800/80 rounded-xl p-4 flex-shrink-0">
             <div className="flex relative">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

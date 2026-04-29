@@ -8,41 +8,39 @@ import TodoWidget from "./widget-components/TodoWidget";
 export default function Widgets() {
   const d = new Date();
   return (
-    <div className="absolute hidden group-hover:block z-20 h-[835px] w-[750px] bg-gray-700/90 top-0 left-4 -mt-[800px] rounded-lg text-gray-200 fadein">
+    <div className="hidden group-hover:flex flex-col w-[680px] max-h-[80vh] bg-zinc-900/95 backdrop-blur-2xl absolute left-0 bottom-[calc(100%+8px)] rounded-xl ring-1 ring-white/10 shadow-2xl text-gray-200 fadein z-50 overflow-hidden">
       {/* Header */}
-      <div className="relative">
-        <p className="absolute left-1/2 -translate-x-1/2 text-3xl mt-5">
-          {String(d.getHours()).padStart(2, '0')}:{String(d.getMinutes()).padStart(2, '0')}
+      <div className="flex items-center justify-between px-5 pt-5 pb-2">
+        <p className="text-2xl font-light">
+          {String(d.getHours()).padStart(2, "0")}:{String(d.getMinutes()).padStart(2, "0")}
         </p>
-        <div className="w-[88px] h-11 bg-gray-600/90 absolute right-4 top-4 rounded-md flex justify-center items-center">
-          <PlusIcon className="w-6" />
-          <div className="rounded-full w-7 aspect-square bg-zinc-200 ml-1 flex justify-center items-center">
+        <div className="flex items-center gap-x-2">
+          <div className="w-8 h-8 rounded-full bg-zinc-200 flex justify-center items-center">
             <UserIcon className="w-5 fill-zinc-700" />
+          </div>
+          <div className="h-8 px-3 bg-white/10 hover:bg-white/20 transition-colors rounded-md flex items-center gap-x-1.5 cursor-pointer">
+            <PlusIcon className="w-4" />
+            <span className="text-xs">Add widgets</span>
           </div>
         </div>
       </div>
       {/* Search Bar */}
-      <div className="w-[615px] h-9 bg-zinc-800/90 mt-20 relative left-1/2 -translate-x-1/2 rounded flex items-center">
-        <SearchIcon className="w-5 ml-2" />
-        <input
-          type="text"
-          name=""
-          id=""
-          className="h-7 bg-transparent ml-1 w-11/12 outline-none"
-          placeholder="Search the web"
-          autoFocus={true}
-        />
+      <div className="mx-5 mb-4">
+        <div className="w-full h-9 bg-white/10 hover:bg-white/15 transition-colors rounded-lg flex items-center px-3 gap-x-2">
+          <SearchIcon className="w-4 opacity-60 flex-shrink-0" />
+          <input
+            type="text"
+            className="h-full bg-transparent w-full outline-none text-sm placeholder-white/50"
+            placeholder="Search the web"
+          />
+        </div>
       </div>
-      {/* Widgets */}
-      <div className="w-[615px] relative left-1/2 -translate-x-1/2 mt-8">
-        {/* Stack 1 */}
-        <div className="flex justify-between">
-          {/* Sports Card */}
+      {/* Widgets grid */}
+      <div className="px-5 pb-5 overflow-y-auto flex flex-col gap-y-3">
+        <div className="flex gap-x-3">
           <SportsWidget />
-          {/* Stock Card */}
           <StockWidget />
         </div>
-        {/* Stack 2 */}
         <TodoWidget />
       </div>
     </div>

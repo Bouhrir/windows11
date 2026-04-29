@@ -6,34 +6,56 @@
 
 /* Hide Scrollbar */
 ::-webkit-scrollbar {
-    display: none;
-  }
+  display: none;
+}
 
 /* Segoe Font */
-html{
-    font-family: 'Segoe UI Variable', sans-serif;
+html {
+  font-family: 'Segoe UI Variable', 'Segoe UI', sans-serif;
 }
 
 /* fadein */
-.fadein{
-  animation: fadein 1s;
+.fadein {
+  animation: fadein 0.15s ease-out;
 }
 @keyframes fadein {
-  0%{
-    opacity: 0;
-  }
-  50%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 100;
-  }
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .inter {
-	font-family: "Inter", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 500;
-	font-style: normal;
-	font-bold: 500;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Acrylic glass panels */
+@layer components {
+  .acrylic {
+    @apply bg-zinc-900/90 backdrop-blur-2xl ring-1 ring-white/10 shadow-2xl;
+  }
+}
+
+/* Range input – Windows 11 style */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #38bdf8;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+input[type='range']::-webkit-slider-thumb:hover {
+  background: #7dd3fc;
 }
