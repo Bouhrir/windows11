@@ -1,18 +1,24 @@
 import { SearchIcon } from "@heroicons/react/outline";
 import { PlusIcon, UserIcon } from "@heroicons/react/solid";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SportsWidget from "./widget-components/SportsWidget";
 import StockWidget from "./widget-components/StockWidget";
 import TodoWidget from "./widget-components/TodoWidget";
 
 export default function Widgets() {
-  const d = new Date();
+  const [now, setNow] = useState(new Date());
+
+  useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <div className="hidden group-hover:flex flex-col w-[680px] max-h-[80vh] bg-zinc-900/95 backdrop-blur-2xl absolute left-0 bottom-[calc(100%+8px)] rounded-xl ring-1 ring-white/10 shadow-2xl text-gray-200 fadein z-50 overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between px-5 pt-5 pb-2">
         <p className="text-2xl font-light">
-          {String(d.getHours()).padStart(2, "0")}:{String(d.getMinutes()).padStart(2, "0")}
+          {String(now.getHours()).padStart(2, "0")}:{String(now.getMinutes()).padStart(2, "0")}
         </p>
         <div className="flex items-center gap-x-2">
           <div className="w-8 h-8 rounded-full bg-zinc-200 flex justify-center items-center">
